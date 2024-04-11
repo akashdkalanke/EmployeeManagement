@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>File Upload Example</title>
+  </head>
+  <body>
+    <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="text" name="query" placeholder="Search...">
+      <a th:href="@{/result(query=${query})}" target="_blank">Show Result</a>
+    </form>
+  </body>
+</html>
